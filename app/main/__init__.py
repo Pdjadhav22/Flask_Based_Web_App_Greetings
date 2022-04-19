@@ -2,7 +2,6 @@
 from flask import Blueprint
 
 blueprint = Blueprint('main', __name__)
-print('Main blueprint created', blueprint.import_name)
 
 # from . import views, errors
 

@@ -29,15 +29,6 @@ class testConfig(ConfigMan):
 class prodConfig(ConfigMan):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///'+ os.path.join(basdir+ '\SQLA_practice_prod.db')
 
-config = {
-
-    'development' : devConfig,
-    'testing' : testConfig,
-    'production' : prodConfig,
-    'heroku': HerokuConfig,
-    'default' : devConfig
-}
-
 # Heroku configuration for Loggings
 class HerokuConfig(prodConfig):
     @classmethod
@@ -50,3 +41,12 @@ class HerokuConfig(prodConfig):
         file_handler = StreamHandler()
         file_handler.setLevel(logging.INFO)
         app.logger.addHandler(file_handler)
+
+config = {
+
+    'development' : devConfig,
+    'testing' : testConfig,
+    'production' : prodConfig,
+    'heroku': HerokuConfig,
+    'default' : devConfig
+}

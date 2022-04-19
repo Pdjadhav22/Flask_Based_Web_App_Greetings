@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+{%import "bootstrap/wtf.html" as wtf%}
+
+{%block title%}Flasky - UserForm{%endblock%}
+
+{%block page_content%}
+        <h1>Hello, {%if name%}{{name}}{%else%}Stranger{%endif%}</h1>
+        <div class="Known">
+            {%if not known%}
+            <p>Please to meet you!</p>
+            {%else%}
+            <p>Happy to see you again!</p>
+            {%endif%}
+        </div>
+        
+
+        <!-- by manual creating creating forms -->
+        <!-- <form method="post">
+            {{form.hidden_tag()}} <--Hidden tags used by Flask-WTF to implement CSRF protection -->
+            <!-- {{form.name.label}} {{form.name()}}
+            {{form.submit()}}
+        </form> -->
+
+        <!-- Trial for Html input / User input feilds -->
+        <!-- <label for="Enter Text">Please enter text value</label><br>
+        <input type="text" id="Enter Text", value="Enter string">
+        <input type="submit" value="Click Me!" id=""> -->
+
+        <!-- with help of Bootstrap/wtf.html & quick_form method -->
+        {{wtf.quick_form(form)}}
+{%endblock%}

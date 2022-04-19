@@ -27,7 +27,7 @@ class testConfig(ConfigMan):
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or 'sqlite://'
 
 class prodConfig(ConfigMan):
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///'+ os.path.join(basdir+ '\SQLA_practice_prod.db')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL').replace("://", "ql://", 1) or 'sqlite:///'+ os.path.join(basdir+ '\SQLA_practice_prod.db')
 
 # Heroku configuration for Loggings
 class HerokuConfig(prodConfig):

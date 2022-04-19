@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT happy:app
+waitress-serve --port 8000 hello:app

@@ -1,1 +1,1 @@
-waitress-serve --port 8000 hello:app
+web: gunicorn hello:app

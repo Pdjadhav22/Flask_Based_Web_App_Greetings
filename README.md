@@ -3,6 +3,13 @@
 # Greetings - How it Looks & Works
 ![greetings_look_1](https://user-images.githubusercontent.com/83899750/164134927-52777a2a-aaa9-4eb4-a33d-b78bad91eaf4.gif)
 
+# App Structure
+  - ### configuration options-
+    - Session security with - **SECRET_KEY**
+    - Database configured with **SQLAlchemy -ORM - SQLALCHEMY_DATABASE_URI**
+    - Different config settings based on **Development, Testing & Production environment**
+    - Logging configured with **Heroku configuration options**
+
 # Features of Greetings!
   1.  Greets Unkonw / Strangers with "Please to meet you!"
   2.  Allows User to Enter his/her name.

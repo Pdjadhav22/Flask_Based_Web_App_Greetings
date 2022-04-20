@@ -13,11 +13,11 @@
   - ## Application Factory Function & Blueprints-
     - To enable apply **configuration changes dynamically used Factory function create_app()**
     - **Application package constructor , "\__init__.py\"** - enables to create 
-        - **multiple application instances with different configuration settings provided in Factory function**, which is used during testing
+        - **multiple application instances with different configuration settings provided in Factory function**, which are used during testing.
     -  **Blueprint** - Allows to define view function routes & error handlers while app being created at runtime with application factory.
     -  **Unit tests** - 2 tests are written using the standard unittest package.
-        **Test #1-**  ensures that the application instance exists
-        **Test #2-**  ensures that the application is running under the testing configuration
+         -  **Test #1-**  ensures that the application instance exists
+         -  **Test #2-**  ensures that the application is running under the testing configuration
         
   - ## Database Setups-
     - Based on Application environment used different Databases-

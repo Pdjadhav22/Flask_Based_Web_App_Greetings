@@ -4,13 +4,13 @@
 ![greetings_look_1](https://user-images.githubusercontent.com/83899750/164134927-52777a2a-aaa9-4eb4-a33d-b78bad91eaf4.gif)
 
 # App Structure
-  - ### configuration options-
+  - ## configuration options-
     - Session security with - **SECRET_KEY**
     - Database configured with **SQLAlchemy -ORM - SQLALCHEMY_DATABASE_URI**
     - Different config settings based on **Development, Testing & Production environment**
     - Logging configured with **Heroku configuration options**
  
-  - ### Application Factory Function & Blueprints-
+  - ## Application Factory Function & Blueprints-
     - To enable apply **configuration changes dynamically used Factory function create_app()**
     - **Application package constructor , __init__.py** - enables to create 
         - **multiple application instances with different configuration settings provided in Factory function**, which is used during testing
@@ -19,12 +19,16 @@
         **Test #1-**  ensures that the application instance exists
         **Test #2-**  ensures that the application is running under the testing configuration
         
-    - ### Database Setups-
-      - Based on Application environment used different Databases-
-          - Development & testing environment uses **sqlite**.
-          - Production environment uses **postgresql over Heroku platform**.
+  - ## Database Setups-
+    - Based on Application environment used different Databases-
+        - Development & testing environment uses **sqlite**.
+        - Production environment uses **postgresql over Heroku platform**.
 
-# Features of Greetings!
+  - ## Deployment-
+    - Deployed on Heroku Platform.
+    - https://greetings22.herokuapp.com/
+
+# Features of Greetings-APP!
   1.  Greets Unkonw / Strangers with "Please to meet you!"
   2.  Allows User to Enter his/her name.
   3.  Entered Name is saved in App database to make same user as Known user by Name.
